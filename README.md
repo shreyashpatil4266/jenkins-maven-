@@ -1,67 +1,16 @@
-# Jenkins Maven Example Project
+# Hotel-Management-OOP-Project
 
-This is a basic Java project built with Maven and integrated with Jenkins for continuous integration.
-
-## 🛠 Project Structure
-
-hello-maven-jenkins/ ├── pom.xml └── src/ └── main/ └── java/ └── HelloWorld.java
-
-
-## 📦 Build with Maven
-
-Make sure you have Maven installed. maually or you can install automatcally in the jenkins
-
-``
-mvn clean package
-
-
-First create directory then add the java file adn pom.xml 
-mkdir hello-maven-jenkins
-cd hello-maven-jenkins
-
-for javafile
-mkdir -p src/main/java
-
-then add java file vim src/main/java/HelloWorld.java
-  then pom.xml vim pom.xml
-
-
-then run docker docker run -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
-
-and locally http://localhost:8080/ go to jenkins and setup  -----docker start jenkins  if its stops
-
-in jenkins 
-manage jenkins----global tools configuration---scrooll down---add maven and save
-
-
-go to dashboard 
-new item----freeporject---name---then if you have add the content to git then source management add git and url ---if not then skip ---- save ---build now
-
-
-
-
-**proof
-![Screenshot 2025-04-19 200446](https://github.com/user-attachments/assets/304308f5-6b52-4445-b06c-3f458bf936a4)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This is a Hotel Management tool which can be used to manage
+activites like storing customer details, booking rooms of four different types, ordering food
+for particular rooms, unbooking rooms and showing the bill. It can also be used to see
+different room features and room availibility. It is a menu driven program and it runs until
+the user exits. File handling has been used to store the current status of the
+hotel(customer details, booked rooms, food ordered) in a file once the program exits so
+that when we restart the program, the old details are not lost. The program reads the file
+when it restarts to know the previous status of the hotel. Writing of file has been done in a
+separate thread as it can be done parallely. User defined exception is thrown if the user
+tries to book an already allotted room. Exception handling is properly done to deal with any
+kind of unexpected exception.
+##### Topics Covered-  
+Classes and Objects, Inheritance, File Handling with Objects, ArrayList, implementing
+Interface, User defined exception and Exception handling.
